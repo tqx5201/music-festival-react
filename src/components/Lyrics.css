@@ -1,0 +1,79 @@
+.lyrics-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
+  max-height: calc(100vh - 180px - 170px); /* 减去波形和版权的高度 */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lyrics-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 50% 10px;
+  position: relative;
+}
+
+.lyrics-container::-webkit-scrollbar {
+  display: none;
+}
+
+.lyric-line {
+  padding: 10px 12px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.8;
+  font-size: 15px;
+  text-align: center;
+}
+
+.lyric-line:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.lyric-line.active {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  background: linear-gradient(135deg, var(--primary-light), rgba(255, 255, 255, 0.1));
+  transform: scale(1.05);
+  border-left: 3px solid var(--primary-color);
+  border-right: 3px solid var(--primary-color);
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.empty-lyrics {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .lyrics-section {
+    min-height: 300px;
+  }
+}

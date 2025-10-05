@@ -1,0 +1,23 @@
+/* 音频可视化波浪样式 */
+.audio-visualizer {
+  position: fixed;
+  bottom: 45px; /* 留出底部版权信息的空间 */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.audio-visualizer canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .audio-visualizer {
+    height: 60px;
+    bottom: 38px; /* 移动端版权信息高度较小 */
+  }
+}

@@ -1,0 +1,80 @@
+.input-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-modal-field {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-modal-field:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(var(--primary-color), 0.1);
+}
+
+.input-modal-field::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.input-modal-btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 100px;
+}
+
+.input-modal-btn.cancel {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-modal-btn.cancel:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.input-modal-btn.confirm {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-modal-btn.confirm:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.input-modal-btn.confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .input-modal-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .input-modal-btn {
+    width: 100%;
+  }
+}
