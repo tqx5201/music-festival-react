@@ -118,7 +118,7 @@ function AppContent() {
       showNotification('正在获取下载链接...', 'info');
       const data = await musicApi.getMusicUrl(currentSong.source, currentSong.id, quality);
       if (data && data.url) {
-        const filename = `${currentSong.name} - ${formatArtist(currentSong.artist)}.mp3`;
+        const filename = `666${currentSong.name} - ${formatArtist(currentSong.artist)}.mp3`;
         downloadFile(data.url, filename);
         showNotification('开始下载音乐', 'success');
       } else {
